@@ -13,24 +13,16 @@ function preload() {
 let isGameOverVisible = true;
 let blinkInterval;
 
-// function setup() {
-//   canvas = createCanvas(canvasEl.offsetWidth,400);
-//     canvas.style('display', 'block');
-//   canvas.parent('sketch-id');
-//   invaders = new Invaders(alienImage, 4);
-//   player = new Player(shooterImage);
-//   blinkInterval = setInterval(blinkGameOverText, 500); // Blink every 1 second
-// }
 
 function setup() {
 
   let canvasSize = document.getElementById('sketch-id')
-  canvas = createCanvas(canvasSize.offsetWidth,400);
+  canvas = createCanvas(canvasSize.offsetWidth,450);
   canvas.style('display', 'block');
   canvas.parent('sketch-id');
   invaders = new Invaders(alienImage, 4);
   player = new Player(shooterImage);
-
+  blinkInterval = setInterval(blinkGameOverText, 500); 
   
 }
 
@@ -103,7 +95,7 @@ function connectToStart() {
 
 
 function draw() {
-  // if (window?.userProfile?.email) {
+  if (window?.userProfile?.email) {
     // Game is in progress
     document.getElementById('btn-passport').hidden = true;
     document.getElementById('btn-logout').hidden = false;
@@ -121,13 +113,13 @@ function draw() {
       showGameOver();
     }
   }
-//    else {
-//     // Show start screen
-//     connectToStart();
-//     document.getElementById('btn-passport').hidden = false;
-//     document.getElementById('btn-logout').hidden = true;
-//   }
-// }
+   else {
+    // Show start screen
+    connectToStart();
+    document.getElementById('btn-passport').hidden = false;
+    document.getElementById('btn-logout').hidden = true;
+  }
+}
 
 
 

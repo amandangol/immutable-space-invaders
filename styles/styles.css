@@ -16,7 +16,7 @@ header {
     background-color: rgba(0, 0, 0, 0.7); 
     color: #fff;
     text-align: center;
-    padding: 5px 0;
+    padding: 2px 0;
 }
 
 
@@ -24,7 +24,7 @@ header {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 #sketch-id {
@@ -48,15 +48,17 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
+    margin-top: 10px;
 }
 
 .connect-button:hover {
     background-color: #005ca3; 
 }
 .logout-button {
-    background-color: #e4381a; /* Blue button background */
+    background-color: #e4381a; 
     color: #fff;
     padding: 10px 20px;
+    margin-top: 10px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
