@@ -6,7 +6,7 @@ class Player {
         this.isMovingLeft = false;
         this.isMovingRight = false;
         this.bullets = [];
-        this.lives = 2;
+        this.lives = 3;
         this.r = 12;
         this.maxBullets = 3;
         this.score = 0; 
@@ -54,31 +54,22 @@ class Player {
     drawLives(t_width) {
         fill(255);
         textSize(15);
-        text("LIVES", t_width, 25);
+        text("LIVES", t_width+390, 25);
         for (let i = 0; i < this.lives; i++) {
-            const x = t_width + 60 + i * 40; 
+            const x = t_width +450 + i * 40; 
             image(this.image, x, 10, this.r * 2, this.r * 2);
         }
     }
-    
-    
     drawInfo() {
-        fill(255);
-        let userEmail = window?.userProfile?.email;
-        let userText = "Player: ";
-        let userTextWidth = textWidth(userText);
-    
-        text(userText, 50, 25);
-        text(userEmail, 50 + userTextWidth, 25);
-    
+        fill(255)
+        let player = window?.userProfile?.email + ": ";
+        let player_ = textWidth(player);
+        let score = text(player, 50, 25);
         push();
         fill(100, 255, 100);
-        let scoreText = "Score: " + this.score;
-        let scoreTextWidth = textWidth(scoreText);
-        text(scoreText, 50 + userTextWidth + userTextWidth, 25); 
+        text(this.score, player_ + 50, 25);
         pop();
-    
-        this.drawLives(50 + userTextWidth + userTextWidth + scoreTextWidth + 10);
+        this.drawLives(player_ + textWidth(this.score) + 100)
     }
     
     

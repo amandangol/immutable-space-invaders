@@ -1,19 +1,19 @@
 /* styles.css */
 body {
-    font-family: "Press Start 2P", sans-serif; /* Retro gaming font */
+    font-family: "Press Start 2P", sans-serif; 
     margin: 0;
     padding: 0;
-    background-color: #000; /* Dark background */
-    color: #fff; /* White text color */
-    text-shadow: 2px 2px 4px #000; /* Text shadow for retro effect */
+    background-color: #000; 
+    color: #fff; 
+    text-shadow: 2px 2px 4px #000; 
     background-image: url('https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Fixed background */
+    background-attachment: fixed;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+    background-color: rgba(0, 0, 0, 0.7); 
     color: #fff;
     text-align: center;
     padding: 5px 0;
@@ -40,8 +40,8 @@ h2 {
     font-size: 24px; 
 }
 
-.connect-button, .logout-button {
-    background-color: #0074cc; /* Blue button background */
+.connect-button{
+    background-color: #0074cc; 
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -50,6 +50,20 @@ h2 {
     font-size: 16px;
 }
 
-.connect-button:hover, .logout-button:hover {
-    background-color: #005ca3; /* Darker blue on hover */
+.connect-button:hover {
+    background-color: #005ca3; 
+}
+.logout-button {
+    background-color: #e4381a; /* Blue button background */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+.logout-button:hover {
+    background-color: #ff000f; 
 }

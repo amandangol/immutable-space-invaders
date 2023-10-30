@@ -6,19 +6,32 @@ let gameOver = false;
 let canvas;
 
 function preload() {
-  alienImage = loadImage("invader.png");
-  shooterImage = loadImage('player.png');
+  alienImage = loadImage("images/invader.png");
+  shooterImage = loadImage('images/player.png');
 }
 
 let isGameOverVisible = true;
 let blinkInterval;
 
+// function setup() {
+//   canvas = createCanvas(canvasEl.offsetWidth,400);
+//     canvas.style('display', 'block');
+//   canvas.parent('sketch-id');
+//   invaders = new Invaders(alienImage, 4);
+//   player = new Player(shooterImage);
+//   blinkInterval = setInterval(blinkGameOverText, 500); // Blink every 1 second
+// }
+
 function setup() {
-  canvas = createCanvas(800, 400);
+
+  let canvasSize = document.getElementById('sketch-id')
+  canvas = createCanvas(canvasSize.offsetWidth,400);
+  canvas.style('display', 'block');
   canvas.parent('sketch-id');
   invaders = new Invaders(alienImage, 4);
   player = new Player(shooterImage);
-  blinkInterval = setInterval(blinkGameOverText, 1000); // Blink every 1 second
+
+  
 }
 
 function showGameOver() {
@@ -90,26 +103,32 @@ function connectToStart() {
 
 
 function draw() {
-  if(window?.userProfile?.email){
+  // if (window?.userProfile?.email) {
+    // Game is in progress
     document.getElementById('btn-passport').hidden = true;
     document.getElementById('btn-logout').hidden = false;
+    
     background(0);
+    
     player.update();
     player.draw();
     player.drawInfo();
+    
     invaders.update(player);
     invaders.draw();
-    if (player.lives == 0) {
+    
+    if (player.lives === 0) {
       showGameOver();
     }
   }
-  else{
-    connectToStart();
-    document.getElementById('btn-passport').hidden = false;
-    document.getElementById('btn-logout').hidden = true;
+//    else {
+//     // Show start screen
+//     connectToStart();
+//     document.getElementById('btn-passport').hidden = false;
+//     document.getElementById('btn-logout').hidden = true;
+//   }
+// }
 
-  }
-}
 
 
 function keyPressed() {
@@ -135,6 +154,6 @@ function keyPressed() {
 
 function resetGame() {
   setup();
-  player.lives = 2;
+  player.lives = 3;
   gameOver = false;
 }
