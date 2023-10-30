@@ -8,7 +8,7 @@ class Alien {
     draw() {
         image(this.image, this.x, this.y, this.r * 2, this.r * 2);
     }
-    hasHitPlayer(player) {
+    checkCollisionWithPlayer(player) {
           if (dist(this.x, this.y, player.x, player.y) < this.r + player.r) {
             return true;
         }

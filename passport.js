@@ -10,7 +10,4 @@ window.passport = new window.immutable.passport.Passport({
   });
 
 
-// window.userProfile = await window.passport.getUserInfo();
-
-// console.log("userrrrrr", window.userProfile);
   

@@ -1,0 +1,60 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#sketch-holder {
+    margin: 0 auto;
+    display: block;
+}
+
+h2 {
+    color: #333;
+}
+
+.connect-button {
+    margin-top: 10px;
+    background-color: #0074cc; /* Change the background color to a suitable color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove the button border */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.connect-button:hover {
+    background-color: #005ca3; /* Change the background color on hover */
+}
+
+/* styles.css */
+.logout-button {
+    background-color: #f00; /* Red background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove the button border */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Space between the button and other elements */
+}
+
+.logout-button:hover {
+    background-color: #d00; /* Darker red background color on hover */
+}

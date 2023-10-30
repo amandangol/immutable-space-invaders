@@ -20,7 +20,7 @@ class Invaders {
             } else if (this.direction == 1) {
                 alien.x-= this.speed;
             }
-            if (alien.hasHitPlayer(player)){
+            if (alien.checkCollisionWithPlayer(player)){
                 player.loseLive();
             }
         }
@@ -158,7 +158,7 @@ class Invaders {
      updateBullets(player) {
         for (let i = this.bullets.length - 1; i >= 0; i-- ) {
             this.bullets[i].y  += 2;
-            if(this.bullets[i].hasHitPlayer(player)){
+            if(this.bullets[i].checkCollisionWithPlayer(player)){
                 player.loseLive();
             }
         }
