@@ -1,21 +1,5 @@
 # Comprehensive Guide to Immutable Passport Integration
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [Step 1: Create a Simple Application or git clone a repository of the simple application or a game](#step-1-create-a-simple-application)
-- [Step 2: Register Your Application on Immutable Developer Hub](#step-2-register-your-application-on-immutable-developer-hub)
-- [Step 3: Install and Initialize the Passport Client](#step-3-install-and-initialize-the-passport-client)
-- [Step 4: Log in a User with Passport](#step-4-log-in-a-user-with-passport)
-- [Step 5: Display User Information](#step-5-display-user-information)
-- [Step 6: Log Out a User](#step-6-log-out-a-user)
-- [Step 7: Initiate a Transaction from Passport](#step-7-initiate-a-transaction-from-passport)
-- [Conclusion](#conclusion)
-- [Additional Resources](#additional-resources)
-
----
-
 ## Introduction
 
 In the rapidly evolving landscape of blockchain technology, **Immutable Passport** stands out as a cutting-edge solution designed especially for gaming applications. This revolutionary tool empowers developers to seamlessly incorporate blockchain-based authentication and transaction capabilities into their gaming projects, enhancing both security and functionality
@@ -29,6 +13,7 @@ These step-by-step instructions will walk you through the entire process, from c
 So, let's embark on this journey to unlock the power of Immutable Passport, enhancing your gaming application and expanding the horizons of blockchain technology in the world of gaming. Let's get started! 🎮🚀
 
 Certainly! Here's a step-by-step guide that includes code snippets and prerequisites for creating a simple game application with Immutable Passport authentication:
+![Immutable Passport](https://assets-global.website-files.com/646557ee455c3e16e4a9bcb3/646557ee455c3e16e4a9bfa5_zkevm.png)
 
 ### Prerequisites:
 
