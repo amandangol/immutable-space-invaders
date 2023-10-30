@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <title>Stack Invaders</title>
+    <title>Space Invaders👾</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@imtbl/sdk@0.20.1"></script>
     <script type="module" src="passport.js"></script>
@@ -17,26 +18,28 @@
     <script src="Bullet.js"></script>
     <script src="PlayerBullet.js"></script>
     <script src="AlienBullet.js"></script>
-    <script src="Debris.js"></script>
 </head>
+
 <body>
     <header>
         <nav>
-            <h1>Space Invaders</h1>
+            <h1>👾Space Invaders👾</h1>
         </nav>
     </header>
+
     <main>
         <div class="container">
-            <h2>Press (space key) to shoot and arrows to move!</h2>
-            <div id="sketch-holder">
-                <!-- Our sketch will go here! -->
+            <h2 class="game-instructions">Unleash your firepower with the Space Bar while dodging danger using the Arrow Keys!</h2>
+            <div id="sketch-id" class="game-canvas">
+                <!-- This is the game canvas -->
             </div>
-            <div id="actions">
+            <div id="actions" class="game-actions">
                 <button id="btn-passport" class="connect-button" hidden>Connect Passport</button>
-                <button id="btn-logout" class="logout-button" style="display: none;">Logout</button>
+                <button id="btn-logout" class="logout-button" style="" hidden>Logout</button>
             </div>
         </div>
-        <p id="user"></p>
+        <p id="user" class="user-info"></p>
     </main>
 </body>
+
 </html>

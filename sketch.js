@@ -15,7 +15,7 @@ let blinkInterval;
 
 function setup() {
   canvas = createCanvas(800, 400);
-  canvas.parent('sketch-holder');
+  canvas.parent('sketch-id');
   invaders = new Invaders(alienImage, 4);
   player = new Player(shooterImage);
   blinkInterval = setInterval(blinkGameOverText, 1000); // Blink every 1 second
@@ -80,10 +80,14 @@ function mouseClicked() {
 function connectToStart() {
   background(0);
   fill(255);
-  textSize(16);
-  let startText = "GAME will start after succesfully authenticating. Click on Connect passport"
-  text(startText, width/2 - textWidth(startText)/2, height/2);
+  textSize(24);
+  textAlign(CENTER);
+  let startText = "Welcome to Space Invaders!\nClick 'Connect Passport' to start the game.";
+  let yOffset = sin(frameCount * 0.03) * 10; // Adjust the amplitude and speed as needed
+  text(startText, width / 2, height / 2 + yOffset);
 }
+
+
 
 function draw() {
   if(window?.userProfile?.email){

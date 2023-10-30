@@ -1,60 +1,55 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Press Start 2P", sans-serif; /* Retro gaming font */
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text color */
+    text-shadow: 2px 2px 4px #000; /* Text shadow for retro effect */
+    background-image: url('https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixed background */
 }
 
 header {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 5px 0;
 }
+
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    padding: 10px;
 }
 
-#sketch-holder {
+#sketch-id {
     margin: 0 auto;
     display: block;
 }
 
+h1 {
+    font-size: 36px;
+}
+
 h2 {
-    color: #333;
+    font-size: 24px; 
 }
 
-.connect-button {
-    margin-top: 10px;
-    background-color: #0074cc; /* Change the background color to a suitable color */
-    color: #fff; /* Text color */
-    padding: 10px 20px; /* Padding for the button */
-    border: none; /* Remove the button border */
-    cursor: pointer; /* Add a pointer cursor on hover */
-    border-radius: 5px; /* Add rounded corners */
-    font-size: 16px; /* Font size */
+.connect-button, .logout-button {
+    background-color: #0074cc; /* Blue button background */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.connect-button:hover {
-    background-color: #005ca3; /* Change the background color on hover */
-}
-
-/* styles.css */
-.logout-button {
-    background-color: #f00; /* Red background color */
-    color: #fff; /* White text color */
-    padding: 10px 20px; /* Padding for the button */
-    border: none; /* Remove the button border */
-    cursor: pointer; /* Add a pointer cursor on hover */
-    border-radius: 5px; /* Add rounded corners */
-    font-size: 16px; /* Font size */
-    margin-top: 10px; /* Space between the button and other elements */
-}
-
-.logout-button:hover {
-    background-color: #d00; /* Darker red background color on hover */
+.connect-button:hover, .logout-button:hover {
+    background-color: #005ca3; /* Darker blue on hover */
 }

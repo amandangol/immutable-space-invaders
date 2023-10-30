@@ -1,8 +1,6 @@
 
 window.provider = window.passport.connectEvm();
 
-// document.ready
-// window.accounts = await window.provider.request({ method: "eth_requestAccounts" });
 
 const connectPassport = async function(){
     window.accounts = await window.provider.request({ method: "eth_requestAccounts" });
@@ -14,7 +12,6 @@ const connectPassport = async function(){
 
 const getUserInfo = async function(){
     window.userProfile = await window.passport.getUserInfo();
-    console.log("userrrrrr", window.userProfile);
 }
 
 const passportLogout = async function(){
@@ -24,7 +21,6 @@ const passportLogout = async function(){
 }
 
 window.addEventListener('load', function() {
-
     const passportBtn = this.document.getElementById('btn-passport');
     const logoutBtn = this.document.getElementById('btn-logout');
     passportBtn.onclick = function(){
@@ -34,10 +30,7 @@ window.addEventListener('load', function() {
     logoutBtn.onclick = passportLogout;
     window.passport.loginCallback();
 
-    // window.passport.loginCallback();
-    // getUserInfo();
 });
 
-// passport.logout();
 
 
