@@ -72,15 +72,21 @@ function blinkGameOverText() {
   isGameOverVisible = !isGameOverVisible;
 }
 
-function mouseClicked() {
-  if (gameOver) {
-    resetGame();
-  }
-}
 
 function mouseClicked() {
-  if (gameOver) {
-    resetGame();
+  if (isGameOver) {
+    // Check if the click is within the "Continue" button
+    let continueX = width / 2;
+    let continueY = height / 2 + 100;
+    if (
+      mouseX > continueX - 120 &&
+      mouseX < continueX + 120 &&
+      mouseY > continueY - 20 &&
+      mouseY < continueY + 20
+    ) {
+      resetGame();
+      isGameOver = false; // Reset the game over flag
+    }
   }
 }
 
