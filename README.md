@@ -21,20 +21,33 @@ Certainly! Here's a step-by-step guide that includes code snippets and prerequis
 2. Node.js and npm installed on your development machine.
 3. An account on the Immutable Developer Hub.
 
-### Step 1: Set Up the Project
+### Step 1: Set Up Your Project
 
-1. Create a new directory for your project and navigate to it:
+1. **Create a New Directory for Your Project**: Start by creating a new directory for your project. You can choose any name you like. In this example, I'll name it `immuatble-spaceinvaders`.
 
-```bash
-mkdir space-invaders-auth
-cd space-invaders-auth
-```
+   ```bash
+   mkdir immuatble-spaceinvaders
+   cd immuatble-spaceinvaders
+   ```
 
-2. Initialize a new Node.js project:
+   If you already have an existing game application, you can skip this step. However, make sure to navigate to your project's root directory.
 
-```bash
-npm init -y
-```
+2. **Clone a Basic Game Application Repository (Optional)**: If you prefer to start with a pre-existing game application, you can clone a basic game application repository from a version control system like GitHub. In this guide, I have cloned a basic Space Invaders game application repository from [Github Repo](https://github.com/LukeGarrigan/codeheir.com/tree/master/evolution-of-games/7%20-%20space-invaders) and are now adding Passport integration and other functionalities to it:
+
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+
+   If you have an existing game project, navigate to its directory instead.
+
+3. Initialize a new Node.js project inside the cloned repository:
+
+   ```bash
+   npm init -y
+   ```
+
+By creating a new directory and optionally cloning a basic game application repository, you'll have a dedicated space for your project where you can seamlessly integrate Passport authentication and other functionalities.
 
 ## Step 2: Register Your Application on Immutable Developer Hub
 
@@ -89,7 +102,7 @@ By following these steps, you will have successfully registered your application
 1. Install the required Node.js packages:
 
 ```bash
-npm install @imtbl/sdk
+npm install -D @imtbl/sdk
 ```
 
 ### Step 4: Set Up Your Game Application
