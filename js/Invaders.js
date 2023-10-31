@@ -100,7 +100,7 @@ class Invaders {
         this.speed += 0.5;
         this.aliens = this.initialiseAliens();
     }
-		// get all the x positions for a single frame
+		
     getAllXPositions() {
         let allXPositions = new Set();
         for (let alien of this.aliens) {

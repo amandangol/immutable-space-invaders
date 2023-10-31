@@ -55,10 +55,10 @@ class Player {
     drawLives(t_width) {
         fill(255);
         textSize(15);
-        text("LIVES", t_width + 450, 25);
+        text("LIVES", t_width + 350, 25);
         const spacing = 30;
         for (let i = 0; i < this.lives; i++) {
-            const x = t_width + 500 + i * spacing;
+            const x = t_width + 400 + i * spacing;
             image(this.image, x, 10, this.r * 1.5, this.r * 1.5);
         }
     }
@@ -95,12 +95,16 @@ class Player {
 
     
     moveLeft() {
-        this.isMovingRight = false;
-        this.isMovingLeft = true;
+        if (this.x - 1 > this.r) { // Check if the player won't move out of the left screen edge
+            this.isMovingRight = false;
+            this.isMovingLeft = true;
+        }
     }
     moveRight() {
-        this.isMovingLeft = false;
-        this.isMovingRight = true;
+        if (this.x + 1 < width - this.r) { // Check if the player won't move out of the right screen edge
+            this.isMovingLeft = false;
+            this.isMovingRight = true;
+        }
     }
     shootUp(){
         return this.y > invaders.aliens[0].y;

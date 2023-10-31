@@ -3,7 +3,7 @@ class PlayerBullet extends Bullet {
     constructor(x, y, up) {
         super(x, y);
         this.up = up;
-        console.log("down", up);
+        
     }
     update() {
         if(this.up){
@@ -14,7 +14,6 @@ class PlayerBullet extends Bullet {
         
     }
     isOffScreen(){
-        // console.log(this.y, height)
         if(this.y < 0 || this.y > height){
             return true
         }else{

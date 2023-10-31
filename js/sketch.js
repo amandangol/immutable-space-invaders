@@ -21,7 +21,7 @@ let blinkInterval;
 function setup() {
 
   let canvasSize = document.getElementById('sketch-id')
-  canvas = createCanvas(900,450);
+  canvas = createCanvas(800,400);
   canvas.style('display', 'block');
   canvas.parent('sketch-id');
   invaders = new Invaders(alienImage, 4);
@@ -66,6 +66,7 @@ function showGameOver() {
   noStroke();
   fill(0, 255, 0); 
   text(continueText, continueX, continueY);
+  
 }
 
 function blinkGameOverText() {
@@ -93,12 +94,19 @@ function mouseClicked() {
 function connectToStart() {
   background(0);
   fill(255);
-  textSize(24);
+  textSize(25);
   textAlign(CENTER);
-  let startText = "Welcome to Space Invaders!\nClick 'Connect Passport' to start the game.";
-  let yOffset = sin(frameCount * 0.03) * 10; // Adjust the amplitude and speed as needed
-  text(startText, width / 2, height / 2 + yOffset);
+  textFont("Arial");
+  textStyle();
+  let startText = "👾Welcome to Space Invaders!👾\nClick 'Connect Passport' to start the game.";
+  
+  // Smooth sine wave animation
+  let yOffset = height / 2 + 50 * sin(frameCount * 0.03);
+
+  fill(255);
+  text(startText, width / 2, yOffset);
 }
+
 
 
 function draw() {
