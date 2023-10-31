@@ -123,7 +123,6 @@ window.passport = new window.immutable.passport.Passport({
 ## Step 6: Implement User Authentication
 
 In the `login.js` file, implement the login logic. This code allows users to connect to Passport and authenticate.
-(![Authenticating](image-1.png))
 
 ```javascript
 // login.js
@@ -149,11 +148,11 @@ const connectPassport = async function () {
 };
 ```
 
+(![Authenticating](image-1.png))
+
 ## Step 7: Display User Information in Your Game
 
 Modify your game logic (e.g., `sketch.js`) to personalize the game for authenticated users. This code checks if user information is available and customizes the game accordingly.
-
-![Passport connected](image-2.png)
 
 ```javascript
 // sketch.js
@@ -168,6 +167,8 @@ function draw() {
   }
 }
 ```
+
+![Passport connected](image-2.png)
 
 ## Step 8: Implement User Logout
 
@@ -184,6 +185,8 @@ const passportLogout = async function() {
     }
 };
 ```
+
+![Game Over](gameover.png)
 
 ## Step 9: Initiate a Transaction
 
@@ -216,5 +219,3 @@ Great job! 🚀 You've successfully integrated Immutable Passport into your appl
 For more in-depth information, detailed documentation, and official resources, be sure to visit the [Immutable Passport Documentation](https://docs.immutable.com/docs/zkevm/products/passport/).
 
 Thank you for following this guide. If you have any questions or encounter challenges along the way, please don't hesitate to reach out to the Immutable community or support for assistance. Happy building! 🌟
-
-![Game Over](gameover.png)
