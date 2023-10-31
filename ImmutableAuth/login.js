@@ -33,6 +33,26 @@ const passportLogout = async function() {
   }
 };
 
+async function initiateTransaction() {
+  // Define your transaction data (e.g., a placeholder string)
+  const transactionData = "This is a placeholder transaction data.";
+
+  try {
+      // Initiate the transaction using Immutable Passport
+      const transactionHash = await window.passport.initiateTransaction({
+          to: 'YOUR_CONTRACT_ADDRESS', // Replace with your contract address
+          data: transactionData,
+      });
+
+      // Handle the transaction hash (e.g., display it to the user)
+      console.log('Transaction initiated. Transaction Hash:', transactionHash);
+  } catch (error) {
+      console.error('Error initiating transaction:', error);
+      // Handle errors, e.g., show an error message to the user
+  }
+}
+
+
 window.addEventListener('load', function() {
   const passportBtn = this.document.getElementById('btn-passport');
   const logoutBtn = this.document.getElementById('btn-logout');

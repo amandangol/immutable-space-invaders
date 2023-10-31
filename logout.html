@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <title>Space Invaders👾</title>
     <script src="https://cdn.jsdelivr.net/npm/@imtbl/sdk@0.20.1"></script>
-    <script type="module" src="passport.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@imtbl/sdk@0.20.1"></script>
     <script type="module" src="ImmutableAuth/passport.js"></script>
@@ -13,13 +12,13 @@
     <script src="gamejs/p5.min.js"></script>
     <script src="gamejs/p5.sound.min.js"></script>
     <script src="gamejs/p5.dom.min.js"></script>
-    <script src="sketch.js"></script>
-    <script src="Alien.js"></script>
-    <script src="Invaders.js"></script>
-    <script src="Player.js"></script>
-    <script src="Bullet.js"></script>
-    <script src="PlayerBullet.js"></script>
-    <script src="AlienBullet.js"></script>
+    <script src="js/sketch.js"></script>
+    <script src="js/Alien.js"></script>
+    <script src="js/Invaders.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/Bullet.js"></script>
+    <script src="js/PlayerBullet.js"></script>
+    <script src="js/AlienBullet.js"></script>
 </head>
 
 <body>
@@ -38,9 +37,10 @@
             <div id="actions" class="game-actions">
                 <button id="btn-passport" class="connect-button" hidden>Connect Passport</button>
                 <button id="btn-logout" class="logout-button" style="" hidden>Logout</button>
+                <p id="user" class="user-info"></p>
             </div>
         </div>
-        <p id="user" class="user-info"></p>
+        
     </main>
 </body>
 

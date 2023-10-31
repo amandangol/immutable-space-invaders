@@ -4,6 +4,10 @@ let shooterImage;
 let player;
 let gameOver = false;
 let canvas;
+let gameCompleted = false;
+let allInvadersDestroyed = false;
+
+
 
 function preload() {
   alienImage = loadImage("images/invader.png");
@@ -17,7 +21,7 @@ let blinkInterval;
 function setup() {
 
   let canvasSize = document.getElementById('sketch-id')
-  canvas = createCanvas(canvasSize.offsetWidth,450);
+  canvas = createCanvas(900,450);
   canvas.style('display', 'block');
   canvas.parent('sketch-id');
   invaders = new Invaders(alienImage, 4);
@@ -40,8 +44,6 @@ function showGameOver() {
   let titleY = height / 2 - 60;
   fill(255, 0, 0); // Red color for the title
   text(isGameOverVisible ? "GAME OVER" : "", titleX, titleY);
-
-  
   textSize(24);
   let scoreText = "Your Score: " + player.score;
   let scoreX = width / 2;
@@ -93,7 +95,6 @@ function connectToStart() {
 }
 
 
-
 function draw() {
   if (window?.userProfile?.email) {
     // Game is in progress
@@ -109,8 +110,11 @@ function draw() {
     invaders.update(player);
     invaders.draw();
     
+    // Check if all invaders are destroyed
     if (player.lives === 0) {
       showGameOver();
+    } else if (allInvadersDestroyed) {
+      showCongratulations();
     }
   }
    else {
@@ -119,6 +123,27 @@ function draw() {
     document.getElementById('btn-passport').hidden = false;
     document.getElementById('btn-logout').hidden = true;
   }
+}
+
+
+
+function showCongratulations() {
+  background(0);
+  fill(255);
+  textFont("Arial");
+  textSize(48);
+  textAlign(CENTER, CENTER);
+  textStyle(BOLD);
+  let titleX = width / 2;
+  let titleY = height / 2 - 60;
+  fill(0, 255, 0); // Green color for the message
+  text("CONGRATULATIONS!", titleX, titleY);
+  textSize(24);
+  let scoreText = "Your Score: " + player.score;
+  let scoreX = width / 2;
+  let scoreY = titleY + 40;
+  fill(255, 255, 0);
+  text(scoreText, scoreX, scoreY);
 }
 
 
@@ -142,6 +167,8 @@ function keyPressed() {
     }
   }
 }
+
+
 
 
 function resetGame() {

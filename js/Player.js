@@ -8,8 +8,9 @@ class Player {
         this.bullets = [];
         this.lives = 3;
         this.r = 12;
-        this.maxBullets = 3;
+        this.maxBullets = 4;
         this.score = 0; 
+        
     }
 
     update() {
@@ -54,24 +55,44 @@ class Player {
     drawLives(t_width) {
         fill(255);
         textSize(15);
-        text("LIVES", t_width+390, 25);
+        text("LIVES", t_width + 450, 25);
+        const spacing = 30;
         for (let i = 0; i < this.lives; i++) {
-            const x = t_width +450 + i * 40; 
-            image(this.image, x, 10, this.r * 2, this.r * 2);
+            const x = t_width + 500 + i * spacing;
+            image(this.image, x, 10, this.r * 1.5, this.r * 1.5);
         }
     }
-    drawInfo() {
-        fill(255)
-        let player = window?.userProfile?.email + ": ";
-        let player_ = textWidth(player);
-        let score = text(player, 50, 25);
-        push();
+
+     userElement = document.getElementById('user');
+    
+     drawInfo() {
+        fill(255);
+        let player = window?.userProfile?.email + "";
+        
+        let playerWidth = textWidth(player);
+        let playerX = (width - playerWidth) / 2; // Center the email text horizontally
+        
+        // Calculate the maximum width for the email text
+        let maxEmailWidth = width - 150;
+        if (playerWidth > maxEmailWidth) {
+            player = player.substring(0, Math.floor(maxEmailWidth / textWidth("A"))); // Truncate if too long
+        }
+    
+        // Update the user element in the HTML to display the email
+        const userElement = document.getElementById('user');
+        userElement.innerText = "Player: " + player;
+        
         fill(100, 255, 100);
-        text(this.score, player_ + 50, 25);
-        pop();
-        this.drawLives(player_ + textWidth(this.score) + 100)
+        this.scoreText = "Score: " + this.score;
+        let scoreX = 50;
+        let scoreY = 25; // Adjusted the 'y' position to add more space below the score
+        text(this.scoreText, scoreX, scoreY);
+    
+        let totalWidth = playerWidth + textWidth(this.scoreText) + 100;
+        this.drawLives(totalWidth);
     }
     
+
     
     moveLeft() {
         this.isMovingRight = false;
